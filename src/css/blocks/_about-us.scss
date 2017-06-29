@@ -1,0 +1,46 @@
+.about-us-advantages {
+  padding-left: 71px;
+  padding-right: 108px;
+  margin-bottom: 67px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us-advantages > li {
+  padding: 55px 0 50px;
+  position: relative;
+  @include CeraGRMedium;
+}
+
+.about-us-advantages-decor,
+.about-us-advantages > li::after {
+  width: 100px;
+  height: 100px;
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  margin: 0 0 0 -50px;
+  z-index: 3;
+  transform: rotateZ(45deg);
+}
+
+.about-us-advantages > li::after {
+  width: 94px;
+  height: 94px;
+  top: 26px;
+  margin-left: -47px;
+  background-color: #181a1b;
+}
+
+.about-us-advantages-text {
+  position: relative;
+  z-index: 5;
+  color: #33ddfb;
+  font-size: 44px;
+  line-height: 1;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -1,0 +1,19 @@
+node_modules
+dist/
+.tmp
+app.yaml
+.idea
+azro.studio.brief.iml
+bower_components
+azro.iml
+LICENSE
+README.md
+azro
+build/restless
+build/vieloco
+build/icon
+build/ScrollOverfow Reset - fullPage.js_files
+build/Simple-Lightweight-jQuery-Parallax-Engine-Parallax-js
+.DS_Store
+azro/
+build/.DS_Store

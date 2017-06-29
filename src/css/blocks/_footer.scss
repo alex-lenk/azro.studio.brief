@@ -1,0 +1,74 @@
+footer {
+  padding: 60px 0;
+  background-color: #141516;
+  color: #fff;
+  .container {
+    display: flex;
+  }
+}
+
+.footer-left {
+  padding-top: 30px;
+  text-align: center;
+  max-width: 320px;
+  flex-basis: 320px;
+  flex-shrink: 0;
+  img {
+    max-width: 115px;
+  }
+}
+
+.footer-center {
+  padding: 22px 55px 0;
+  border-left: 1px solid #1d1f20;
+  border-right: 1px solid #1d1f20;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.footer-right {
+  max-width: 320px;
+  padding-top: 85px;
+  padding-left: 60px;
+  font-size: 21px;
+  color: #E6E6E6;
+  line-height: 1.2;
+  flex-shrink: 0;
+  flex-basis: 320px;
+  @include CeraGRLight;
+}
+
+.footer-title {
+  font-size: 36px;
+  text-align: center;
+  color: #33ddfb;
+  @include CeraGRMedium;
+}
+
+.copy {
+  font-size: 16px;
+  margin: 35px 0 0;
+  @include CeraGRThin;
+}
+
+.footer-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  .form-group, .btn-white {
+    height: 55px;
+    width: calc(100% / 2 - 15px);
+  }
+  .btn-white {
+    margin-top: 43px;
+  }
+  .form-group {
+    margin-top: 43px;
+    margin-bottom: 30px;
+  }
+  .form-control {
+    height: 100%;
+    padding: 15px 10px 5px;
+  }
+}

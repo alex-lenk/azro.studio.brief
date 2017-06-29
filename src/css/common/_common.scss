@@ -1,0 +1,78 @@
+html,
+body {
+  height: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1;
+  background: url(../img/bg.jpg) no-repeat top center #1b1d1e;
+  background-size: contain;
+  @include CeraGRLight;
+}
+
+a, .as-link {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:focus, &:hover {
+    color: #33ddfb;
+    outline: none;
+  }
+}
+
+.as-link {
+  cursor: pointer;
+}
+
+b, strong {
+  font-weight: normal;
+  @include CeraGRBold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+.text {
+  &-center {
+    text-align: center
+  }
+  &-left {
+    text-align: left
+  }
+  &-right {
+    text-align: right
+  }
+  &-justify {
+    text-align: justify
+  }
+  &-bold {
+    font-weight: normal;
+    @include CeraGRBold;
+  }
+  &-nowrap {
+    white-space: nowrap;
+  }
+  &-lowercase {
+    text-transform: lowercase;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-capitalize {
+    text-transform: capitalize;
+  }
+}
+
+.list-unstyled {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+button, input, select, textarea {
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+}
