@@ -4,6 +4,104 @@
 @import "common/fonts";
 @import "common/common";
 @import "common/ui";
+@import "common/btn";
+@import "common/radio-custom";
 @import "blocks/header";
 @import "blocks/decor-rhombus";
 @import "blocks/please-choose";
+
+.bread-crumbs {
+  margin-top: 2px;
+  margin-bottom: 115px;
+  background-color: #141516;
+}
+
+.bread-crumbs-list {
+  height: 90px;
+  margin-bottom: 0;
+  padding-left: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.bread-crumbs-back {
+  padding-top: 19px;
+}
+
+.bread-crumbs-back-link {
+  width: 64px;
+  height: 55px;
+  background-color: #1b1d1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .arrow {
+    width: 24px;
+    height: 24px;
+    fill: #33ddfb;
+    transition: all 0.3s ease;
+    transform: rotateZ(90deg);
+  }
+  &:hover {
+    .arrow {
+      fill: #fff;
+    }
+  }
+}
+
+.bread-crumbs-item {
+  padding-top: 36px;
+  text-align: center;
+  font-size: 20px;
+  @include CeraGRRegular;
+  &::after {
+    width: 1px;
+    height: 22px;
+    margin: 12px auto 0;
+    display: block;
+    content: '';
+  }
+}
+
+.bread-crumbs-current {
+  color: #33ddfb;
+  &::after {
+    background-color: #33ddfb;
+  }
+}
+
+.brief-box {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .ui-group {
+    flex-basis: calc(100% / 2 - 35px);
+  }
+}
+
+.ui-checkbox-group {
+  margin-bottom: 40px;
+  .ui-label-field {
+    margin-bottom: 27px;
+    display: block;
+  }
+  .checkbox-custom-label {
+    margin-right: 42px;
+  }
+}
+
+.ui-input-group {
+  .ui-label-field {
+    margin-bottom: 27px;
+    display: block;
+  }
+  .ui-group {
+    margin-bottom: 10px;
+  }
+}
+
+.nav-btn {
+  padding: 85px 0;
+  text-align: center;
+}
