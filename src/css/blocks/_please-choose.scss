@@ -64,10 +64,8 @@
     font-size: 15px;
     display: block;
   }
-  &:hover {
-    + .decor-rhombus {
-      transform: rotateZ(0);
-    }
+  &:hover + .decor-rhombus {
+    transform: rotateZ(0);
   }
 }
 

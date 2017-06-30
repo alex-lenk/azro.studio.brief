@@ -1,34 +1,27 @@
 @font-face {
-  font-family: 'CeraGR-Thin';
-  src: url("../fonts/CeraGR-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/CeraGR-Thin.otf") format("opentype"), url("../fonts/CeraGR-Thin.woff") format("woff"), url("../fonts/CeraGR-Thin.ttf") format("truetype"), url("../fonts/CeraGR-Thin.svg#CeraGR-Thin") format("svg");
+  font-family: 'ceragr-bold';
+  src: url("../fonts/cera_gr_bold-webfont.woff2") format("woff2"), url("../fonts/cera_gr_bold-webfont.woff") format("woff"), url("../fonts/cera_gr_bold-webfont.svg#ceragr-bold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ceragr-bolduploaded_file';
-  src: url("../fonts/cera_gr_bold-webfont.woff2") format("woff2"), url("../fonts/cera_gr_bold-webfont.woff") format("woff"), url("../fonts/cera_gr_bold-webfont.svg#ceragr-bolduploaded_file") format("svg");
+  font-family: 'ceragr-light';
+  src: url("../fonts/cera_gr_light-webfont.woff2") format("woff2"), url("../fonts/cera_gr_light-webfont.woff") format("woff"), url("../fonts/cera_gr_light-webfont.svg#ceragr-light") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ceragr-lightuploaded_file';
-  src: url("../fonts/cera_gr_light-webfont.woff2") format("woff2"), url("../fonts/cera_gr_light-webfont.woff") format("woff"), url("../fonts/cera_gr_light-webfont.svg#ceragr-lightuploaded_file") format("svg");
+  font-family: 'ceragr-medium';
+  src: url("../fonts/cera_gr_medium-webfont.woff2") format("woff2"), url("../fonts/cera_gr_medium-webfont.woff") format("woff"), url("../fonts/cera_gr_medium-webfont.svg#ceragr-medium") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ceragr-mediumuploaded_file';
-  src: url("../fonts/cera_gr_medium-webfont.woff2") format("woff2"), url("../fonts/cera_gr_medium-webfont.woff") format("woff"), url("../fonts/cera_gr_medium-webfont.svg#ceragr-mediumuploaded_file") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ceragr-regularuploaded_file';
-  src: url("../fonts/cera_gr-webfont.woff2") format("woff2"), url("../fonts/cera_gr-webfont.woff") format("woff"), url("../fonts/cera_gr-webfont.svg#ceragr-regularuploaded_file") format("svg");
+  font-family: 'ceragr-regular';
+  src: url("../fonts/cera_gr-webfont.woff2") format("woff2"), url("../fonts/cera_gr-webfont.woff") format("woff"), url("../fonts/cera_gr-webfont.svg#ceragr-regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -39,9 +32,9 @@ body {
   color: #ffffff;
   font-size: 16px;
   line-height: 1;
-  background: url(../img/bg/bg-page@2x.png) no-repeat top center #1b1d1e;
+  background: url(http://azro.studio/img/bg-stub@2x.jpg) no-repeat top center #1b1d1e;
   background-size: cover;
-  font-family: 'ceragr-lightuploaded_file', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 a, .as-link {
@@ -62,7 +55,7 @@ a:focus, a:hover, .as-link:focus, .as-link:hover {
 
 b, strong {
   font-weight: normal;
-  font-family: 'ceragr-bolduploaded_file', sans-serif;
+  font-family: 'ceragr-bold', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-bold {
   font-weight: normal;
-  font-family: 'ceragr-bolduploaded_file', sans-serif;
+  font-family: 'ceragr-bold', sans-serif;
 }
 
 .text-nowrap {
@@ -114,14 +107,159 @@ h1, h2, h3, h4, h5, h6 {
 
 button:focus, button:active, input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active {
   outline: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+}
+
+.ui-placeholder-hide:-moz-placeholder {
+  opacity: 1;
+  color: #939393;
+  font-size: 16px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  font-family: 'ceragr-regular', sans-serif;
+}
+
+.ui-placeholder-hide::-moz-placeholder {
+  opacity: 1;
+  color: #939393;
+  font-size: 16px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  font-family: 'ceragr-regular', sans-serif;
+}
+
+.ui-placeholder-hide:-ms-input-placeholder {
+  opacity: 1;
+  color: #939393;
+  font-size: 16px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  font-family: 'ceragr-regular', sans-serif;
+}
+
+.ui-placeholder-hide::-webkit-input-placeholder {
+  opacity: 1;
+  color: #939393;
+  font-size: 16px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  font-family: 'ceragr-regular', sans-serif;
+}
+
+.ui-placeholder-hide:focus:-moz-placeholder {
+  opacity: 0;
+}
+
+.ui-placeholder-hide:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+.ui-placeholder-hide:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.ui-placeholder-hide:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.ui-group {
+  margin-bottom: 35px;
+  position: relative;
+  font-size: 18px;
+  font-family: 'ceragr-regular', sans-serif;
+}
+
+.ui-label-field {
+  margin-bottom: 12px;
+  display: inline-block;
+  font-size: 18px;
+  position: relative;
+}
+
+.ui-decor-line {
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background-color: #3db8e0;
+  -webkit-transition: width .3s ease;
+  transition: width .3s ease;
+}
+
+.ui-field {
+  width: 100%;
+  height: 55px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #fff;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.04);
+  display: block;
+  font-weight: normal;
+  -webkit-box-shadow: 0 0 45px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.12);
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+.ui-field:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.ui-field:focus + .ui-decor-line {
+  width: 100%;
+}
+
+.ui-required .ui-label-field {
+  padding-left: 7px;
+}
+
+.ui-required .ui-label-field::before {
+  content: '*';
+  color: #fa4b4b;
+  font-size: 17px;
+}
+
+.ui-error-field-text {
+  color: #fa4b4b;
+  position: absolute;
+  bottom: 19px;
+  left: 20px;
+  display: none;
+  font-size: 16px;
+}
+
+.ui-error-field .ui-field {
+  background-color: rgba(250, 75, 75, 0.07);
+}
+
+.ui-error-field .ui-field:-moz-placeholder {
+  opacity: 0;
+}
+
+.ui-error-field .ui-field::-moz-placeholder {
+  opacity: 0;
+}
+
+.ui-error-field .ui-field:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.ui-error-field .ui-field::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.ui-error-field .ui-field:focus ~ .ui-error-field-text {
+  opacity: 0;
+}
+
+.ui-error-field .ui-error-field-text {
+  display: block;
 }
 
 .main-title {
   text-align: center;
   font-size: 44px;
-  font-family: 'ceragr-bolduploaded_file', sans-serif;
+  font-family: 'ceragr-bold', sans-serif;
 }
 
 .main-title span {
@@ -137,7 +275,7 @@ header {
 header .logo, header .phone {
   padding-top: 17px;
   font-size: 20px;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 header .phone {
@@ -204,7 +342,7 @@ header .phone {
   display: block;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .please-choose {
@@ -216,7 +354,7 @@ header .phone {
   margin: 0 0 119px;
   font-size: 24px;
   color: #e6e6e6;
-  font-family: 'ceragr-lightuploaded_file', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 .choose-main-title span {
@@ -281,7 +419,7 @@ header .phone {
   position: relative;
   z-index: 10;
   cursor: pointer;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .choose-title .small {

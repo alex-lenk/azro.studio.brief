@@ -1,0 +1,92 @@
+@import "mixin";
+
+.ui-placeholder-hide {
+  @include hidePlaceholder {
+    opacity: 1;
+    color: #939393;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+    @include CeraGRRegular;
+  }
+  &:focus {
+    @include hidePlaceholder {
+      opacity: 0;
+    }
+  }
+}
+
+.ui-group {
+  margin-bottom: 35px;
+  position: relative;
+  font-size: 18px;
+  @include CeraGRRegular;
+}
+
+.ui-label-field {
+  margin-bottom: 12px;
+  display: inline-block;
+  font-size: 18px;
+  position: relative;
+}
+
+.ui-decor-line {
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background-color: #3db8e0;
+  transition: width .3s ease;
+}
+
+.ui-field {
+  width: 100%;
+  height: 55px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #fff;
+  border: 0;
+  background-color: rgba(#fff, .04);
+  display: block;
+  font-weight: normal;
+  box-shadow: 0 0 45px rgba(#000, .12);
+  transition: all .6s ease;
+  &:focus {
+    background-color: rgba(#fff, .12);
+    + .ui-decor-line {
+      width: 100%;
+    }
+  }
+}
+
+.ui-required .ui-label-field {
+  padding-left: 7px;
+  &::before {
+    content: '*';
+    color: #fa4b4b;
+    font-size: 17px;
+  }
+}
+
+.ui-error-field-text {
+  color: #fa4b4b;
+  position: absolute;
+  bottom: 19px;
+  left: 20px;
+  display: none;
+  font-size: 16px;
+}
+
+.ui-error-field {
+  .ui-field {
+    background-color: rgba(#fa4b4b, .07);
+    @include hidePlaceholder {
+      opacity: 0;
+    }
+    &:focus ~ .ui-error-field-text {
+      opacity: 0;
+    }
+  }
+  .ui-error-field-text {
+    display: block;
+  }
+}

@@ -4,7 +4,7 @@ body {
   color: #ffffff;
   font-size: 16px;
   line-height: 1;
-  background: url(../img/bg/bg-page@2x.png) no-repeat top center #1b1d1e;
+  background: url(http://azro.studio/img/bg-stub@2x.jpg) no-repeat top center #1b1d1e;
   background-size: cover;
   @include CeraGRLight;
 }
@@ -73,6 +73,5 @@ button, input, select, textarea {
   &:focus,
   &:active {
     outline: none;
-    box-shadow: none;
   }
 }

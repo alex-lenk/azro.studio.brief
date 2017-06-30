@@ -15,11 +15,10 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^2.*",
-    "jquery-ui": "^1.*",
+    "jquery": "^3.*",
     "normalize-css": "^7.*",
+    "select2": "^4.*",
     "bootstrap": "^3.*",
-    "slick-carousel": "^1.*",
-    "fullpage.js": "^2.*"
+    "malihu-custom-scrollbar-plugin": "^3.*"
   }
 }
