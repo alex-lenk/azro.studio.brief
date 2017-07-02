@@ -90,6 +90,7 @@
     height: 28px;
     margin-right: 20px;
     background-color: rgba(255, 255, 255, .04);
+    border: 1px solid transparent;
     content: '';
     transition: all 0.3s ease;
     box-shadow: 0 0 45px rgba(0, 0, 0, 0.12);
@@ -98,7 +99,7 @@
     width: 15px;
     height: 7px;
     top: 9px;
-    left: 8px;
+    left: 7px;
     position: absolute;
     border-bottom: 2px solid #33ddfb;
     border-left: 2px solid #33ddfb;
@@ -120,7 +121,7 @@
     opacity: 1;
   }
   + .checkbox-custom-view::before {
-    border-color: #4f8ad9;
+    border-color: #33ddfb;
   }
   + .checkbox-custom-view {
     color: #fff;
