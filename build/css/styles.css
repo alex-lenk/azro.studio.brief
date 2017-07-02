@@ -264,6 +264,12 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   position: relative;
 }
 
+@media (max-width: 414px) {
+  .ui-field {
+    padding-top: 6px;
+  }
+}
+
 .btn {
   border-width: 0;
   background: transparent;
@@ -832,7 +838,7 @@ header {
   }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 993px) {
   .brief-box-half .ui-group {
     -webkit-flex-basis: -webkit-calc(100% / 2 - 35px);
     -ms-flex-preferred-size: calc(100% / 2 - 35px);
@@ -840,11 +846,26 @@ header {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 992px) {
   .brief-box-half .ui-group {
     -webkit-flex-basis: -webkit-calc(100% / 2 - 13px);
     -ms-flex-preferred-size: calc(100% / 2 - 13px);
     flex-basis: calc(100% / 2 - 13px);
+  }
+}
+
+@media (max-width: 768px) {
+  .bread-crumbs-current::after {
+    display: none;
+  }
+  .bread-crumbs-current::before {
+    background-color: #33ddfb;
+    width: 22px;
+    height: 1px;
+    margin-right: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
   }
 }
 
@@ -861,7 +882,7 @@ header {
   display: block;
 }
 
-.ui-checkbox-group .checkbox-custom-label {
+.ui-checkbox-group .checkbox-custom-label:not(:last-of-type) {
   margin-right: 42px;
 }
 
@@ -877,6 +898,12 @@ header {
 .nav-btn {
   padding: 85px 0;
   text-align: center;
+}
+
+@media (max-width: 414px) {
+  .checkbox-custom-label:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
 }
 
 /*# sourceMappingURL=../maps/styles.css.map */

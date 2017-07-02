@@ -88,15 +88,32 @@
   }
 }
 
-@include from('xl') {
+@include from('l') {
   .brief-box-half .ui-group {
     flex-basis: calc(100% / 2 - 35px);
   }
 }
 
-@include between('m', 'l') {
+@include at('m') {
   .brief-box-half .ui-group {
     flex-basis: calc(100% / 2 - 13px);
+  }
+}
+
+@include to('s') {
+  .bread-crumbs-current {
+    &::after {
+      display: none;
+    }
+    &::before {
+      background-color: #33ddfb;
+      width: 22px;
+      height: 1px;
+      margin-right: 12px;
+      display: inline-block;
+      vertical-align: middle;
+      content: '';
+    }
   }
 }
 
@@ -110,7 +127,7 @@
     margin-bottom: 27px;
     display: block;
   }
-  .checkbox-custom-label {
+  .checkbox-custom-label:not(:last-of-type) {
     margin-right: 42px;
   }
 }
@@ -128,4 +145,9 @@
 .nav-btn {
   padding: 85px 0;
   text-align: center;
+}
+@include to('xs') {
+  .checkbox-custom-label:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
 }
