@@ -34,7 +34,8 @@
 
 @media (min-width: 1200px) {
   .container {
-    width: 1326px;
+    width: 100%;
+    max-width: 1326px;
   }
 }
 
