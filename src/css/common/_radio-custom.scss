@@ -117,14 +117,13 @@
 }
 
 .checkbox-custom:checked {
-  + .checkbox-custom-view::after {
-    opacity: 1;
-  }
-  + .checkbox-custom-view::before {
-    border-color: #33ddfb;
-  }
   + .checkbox-custom-view {
     color: #fff;
+    &::after {
+      opacity: 1;
+    }
+    &::before {
+      border-color: #33ddfb;
+    }
   }
 }
-

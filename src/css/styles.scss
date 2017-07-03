@@ -11,83 +11,11 @@
 @import "blocks/please-choose";
 @import "blocks/bread-crumbs";
 
-::-webkit-scrollbar { /* for Mac OS X support */
-  width: 0;
-}
-
 .brief-box {
   margin-bottom: 40px;
-}
-
-.ui-checkbox-group {
-  margin-bottom: 40px;
-  .ui-label-field {
-    margin-bottom: 27px;
-    display: block;
-  }
-  .checkbox-custom-label:not(:last-of-type) {
-    margin-right: 42px;
-  }
-}
-
-.ui-input-group {
-  .ui-label-field {
-    margin-bottom: 27px;
-    display: block;
-  }
-  .ui-group {
-    margin-bottom: 10px;
-  }
 }
 
 .nav-btn {
   padding: 85px 0;
   text-align: center;
-}
-
-@include from('m') {
-  .bread-crumbs-list {
-    height: 90px;
-  }
-
-  .brief-box-half {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-
-@include from('l') {
-  .brief-box-half .ui-group {
-    flex-basis: calc(100% / 2 - 35px);
-  }
-}
-
-@include at('m') {
-  .brief-box-half .ui-group {
-    flex-basis: calc(100% / 2 - 13px);
-  }
-}
-
-@include to('s') {
-  .bread-crumbs-current {
-    &::after {
-      display: none;
-    }
-    &::before {
-      background-color: #33ddfb;
-      width: 22px;
-      height: 1px;
-      margin-right: 12px;
-      display: inline-block;
-      vertical-align: middle;
-      content: '';
-    }
-  }
-}
-
-@include to('xs') {
-  .checkbox-custom-label:not(:last-of-type) {
-    margin-bottom: 15px;
-  }
 }

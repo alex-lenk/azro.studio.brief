@@ -1,5 +1,9 @@
 @import "mixin";
 
+::-webkit-scrollbar { /* for Mac OS X support */
+  width: 0;
+}
+
 .ui-placeholder-hide {
   @include hidePlaceholder {
     opacity: 1;
@@ -201,20 +205,23 @@
   }
 }
 
-@include from('m') {
-  .select-list-choose {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.ui-checkbox-group {
+  margin-bottom: 40px;
+  .ui-label-field {
+    margin-bottom: 27px;
+    display: block;
   }
-  .select-list-choose__item {
-    padding-right: 50px;
-    flex-basis: calc(100% / 2 - 15px);
+  .checkbox-custom-label:not(:last-of-type) {
+    margin-right: 42px;
   }
 }
 
-@include to('xs') {
-  .ui-field {
-    padding-top: 6px;
+.ui-input-group {
+  .ui-label-field {
+    margin-bottom: 27px;
+    display: block;
+  }
+  .ui-group {
+    margin-bottom: 10px;
   }
 }

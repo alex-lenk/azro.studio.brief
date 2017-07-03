@@ -113,6 +113,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   background-size: cover;
 }
 
+::-webkit-scrollbar {
+  /* for Mac OS X support */
+  width: 0;
+}
+
 .ui-placeholder-hide:-moz-placeholder {
   opacity: 1;
   color: #939393;
@@ -390,32 +395,26 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   fill: #fa4b4b;
 }
 
-@media (min-width: 769px) {
-  .select-list-choose {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-  .select-list-choose__item {
-    padding-right: 50px;
-    -webkit-flex-basis: -webkit-calc(100% / 2 - 15px);
-    -ms-flex-preferred-size: calc(100% / 2 - 15px);
-    flex-basis: calc(100% / 2 - 15px);
-  }
+.ui-checkbox-group {
+  margin-bottom: 40px;
 }
 
-@media (max-width: 414px) {
-  .ui-field {
-    padding-top: 6px;
-  }
+.ui-checkbox-group .ui-label-field {
+  margin-bottom: 27px;
+  display: block;
+}
+
+.ui-checkbox-group .checkbox-custom-label:not(:last-of-type) {
+  margin-right: 42px;
+}
+
+.ui-input-group .ui-label-field {
+  margin-bottom: 27px;
+  display: block;
+}
+
+.ui-input-group .ui-group {
+  margin-bottom: 10px;
 }
 
 .btn {
@@ -605,16 +604,16 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   display: none;
 }
 
+.checkbox-custom:checked + .checkbox-custom-view {
+  color: #fff;
+}
+
 .checkbox-custom:checked + .checkbox-custom-view::after {
   opacity: 1;
 }
 
 .checkbox-custom:checked + .checkbox-custom-view::before {
   border-color: #33ddfb;
-}
-
-.checkbox-custom:checked + .checkbox-custom-view {
-  color: #fff;
 }
 
 .main-title {
@@ -640,42 +639,6 @@ header {
 .phone {
   text-align: right;
   white-space: nowrap;
-}
-
-@media (min-width: 769px) {
-  .go-home, .phone {
-    padding-top: 17px;
-  }
-}
-
-@media (min-width: 993px) {
-  header {
-    padding: 60px 0 46px;
-  }
-}
-
-@media (max-width: 992px) {
-  header {
-    padding: 30px 0 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  header, .phone {
-    text-align: center;
-  }
-  .go-home {
-    padding-bottom: 20px;
-  }
-  .main-title {
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 414px) {
-  .phone {
-    font-size: 21px;
-  }
 }
 
 .decor-rhombus {
@@ -820,75 +783,6 @@ header {
   line-height: 1.3;
 }
 
-@media (min-width: 1201px) {
-  .choose-list {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-  .choose-list li {
-    max-width: 300px;
-    -webkit-flex-basis: 300px;
-    -ms-flex-preferred-size: 300px;
-    flex-basis: 300px;
-  }
-  .choose-list li:not(:first-child):not(:last-child) {
-    margin-left: 90px;
-    margin-right: 90px;
-  }
-}
-
-@media (min-width: 993px) and (max-width: 1200px) {
-  .choose-list li {
-    max-width: -webkit-calc(100% / 3 - 20px);
-    max-width: calc(100% / 3 - 20px);
-    -webkit-flex-basis: -webkit-calc(100% / 3 - 20px);
-    -ms-flex-preferred-size: calc(100% / 3 - 20px);
-    flex-basis: calc(100% / 3 - 20px);
-  }
-}
-
-@media (min-width: 769px) {
-  .choose-list {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  .choose-list {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 992px) {
-  .choose-list li {
-    max-width: -webkit-calc(100% / 2 - 15px);
-    max-width: calc(100% / 2 - 15px);
-    -webkit-flex-basis: -webkit-calc(100% / 2 - 15px);
-    -ms-flex-preferred-size: calc(100% / 2 - 15px);
-    flex-basis: calc(100% / 2 - 15px);
-  }
-  .choose-list li:last-child {
-    margin: 80px auto 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .choose-list li:not(:last-child) {
-    margin-bottom: 80px;
-  }
-}
-
 .bread-crumbs {
   margin-top: 2px;
   margin-bottom: 115px;
@@ -967,115 +861,13 @@ header {
   margin-bottom: 40px;
 }
 
-@media (max-width: 768px) {
-  .bread-crumbs {
-    margin-bottom: 50px;
-  }
-  .bread-crumbs-list {
-    padding-bottom: 35px;
-  }
-  .bread-crumbs-item::after {
-    display: none;
-  }
-  .bread-crumbs-back-link {
-    width: 135px;
-    margin: 0 auto;
-  }
-  .bread-crumbs-back-link .arrow {
-    display: none;
-  }
-}
-
-::-webkit-scrollbar {
-  /* for Mac OS X support */
-  width: 0;
-}
-
 .brief-box {
   margin-bottom: 40px;
-}
-
-.ui-checkbox-group {
-  margin-bottom: 40px;
-}
-
-.ui-checkbox-group .ui-label-field {
-  margin-bottom: 27px;
-  display: block;
-}
-
-.ui-checkbox-group .checkbox-custom-label:not(:last-of-type) {
-  margin-right: 42px;
-}
-
-.ui-input-group .ui-label-field {
-  margin-bottom: 27px;
-  display: block;
-}
-
-.ui-input-group .ui-group {
-  margin-bottom: 10px;
 }
 
 .nav-btn {
   padding: 85px 0;
   text-align: center;
-}
-
-@media (min-width: 769px) {
-  .bread-crumbs-list {
-    height: 90px;
-  }
-  .brief-box-half {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: 993px) {
-  .brief-box-half .ui-group {
-    -webkit-flex-basis: -webkit-calc(100% / 2 - 35px);
-    -ms-flex-preferred-size: calc(100% / 2 - 35px);
-    flex-basis: calc(100% / 2 - 35px);
-  }
-}
-
-@media (min-width: 769px) and (max-width: 992px) {
-  .brief-box-half .ui-group {
-    -webkit-flex-basis: -webkit-calc(100% / 2 - 13px);
-    -ms-flex-preferred-size: calc(100% / 2 - 13px);
-    flex-basis: calc(100% / 2 - 13px);
-  }
-}
-
-@media (max-width: 768px) {
-  .bread-crumbs-current::after {
-    display: none;
-  }
-  .bread-crumbs-current::before {
-    background-color: #33ddfb;
-    width: 22px;
-    height: 1px;
-    margin-right: 12px;
-    display: inline-block;
-    vertical-align: middle;
-    content: '';
-  }
-}
-
-@media (max-width: 414px) {
-  .checkbox-custom-label:not(:last-of-type) {
-    margin-bottom: 15px;
-  }
 }
 
 /*# sourceMappingURL=../maps/styles.css.map */

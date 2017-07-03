@@ -61,27 +61,3 @@
 .brief-box-half {
   margin-bottom: 40px;
 }
-
-@include to('s') {
-  .bread-crumbs {
-    margin-bottom: 50px;
-  }
-  .bread-crumbs-list {
-    padding-bottom: 35px;
-  }
-  .bread-crumbs-item {
-    &::after {
-      display: none;
-    }
-  }
-  .bread-crumbs-back-link {
-    width: 135px;
-    margin: 0 auto;
-    .arrow {
-      display: none;
-    }
-  }
-
-  .previous-step {
-  }
-}
