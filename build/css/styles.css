@@ -264,6 +264,154 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   position: relative;
 }
 
+.ui-select-section .ui-field {
+  line-height: 55px;
+  cursor: pointer;
+}
+
+.ui-select-section .arrow {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 19px;
+  right: 21px;
+  fill: #3db8e0;
+}
+
+.select-list-wrap {
+  margin-top: -35px;
+  padding: 20px 20px 20px 0;
+  background-color: #141516;
+  color: #a6a6a6;
+  font-size: 17px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  font-family: 'ceragr-regular', sans-serif;
+}
+
+.select-list-wrap .custom-scroll_container {
+  height: 294px;
+}
+
+.select-list-wrap .custom-scroll_bar-x {
+  display: none;
+}
+
+.ui-select-field-open {
+  height: 100%;
+  margin-bottom: 35px;
+  overflow: visible;
+  opacity: 1;
+  position: relative;
+}
+
+.select-list {
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 30px;
+  list-style: none;
+}
+
+.select-list li {
+  height: 45px;
+  padding-left: 20px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.select-list li:hover {
+  background-color: #1b1d1e;
+}
+
+.select-list li:not(:last-of-type) {
+  border-color: #1a1c1d;
+}
+
+.select-list li::before {
+  width: 20px;
+  height: 1px;
+  margin-right: 20px;
+  background-color: #fff;
+}
+
+.select-list-choose {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.select-list-choose__item {
+  padding-right: 87px;
+  padding-left: 22px;
+  margin-bottom: 46px;
+  color: #33ddfb;
+  font-size: 17px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'ceragr-regular', sans-serif;
+}
+
+.select-list-choose__item::before {
+  background-color: #33ddfb;
+  width: 22px;
+  height: 1px;
+  margin-right: 20px;
+  content: '';
+}
+
+.select-list-choose__item .close {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.select-list-choose__item svg {
+  width: 12px;
+  height: 12px;
+  fill: #fa4b4b;
+}
+
+@media (min-width: 769px) {
+  .select-list-choose {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .select-list-choose__item {
+    padding-right: 50px;
+    -webkit-flex-basis: -webkit-calc(100% / 2 - 15px);
+    -ms-flex-preferred-size: calc(100% / 2 - 15px);
+    flex-basis: calc(100% / 2 - 15px);
+  }
+}
+
 @media (max-width: 414px) {
   .ui-field {
     padding-top: 6px;
@@ -819,6 +967,61 @@ header {
   margin-bottom: 40px;
 }
 
+@media (max-width: 768px) {
+  .bread-crumbs {
+    margin-bottom: 50px;
+  }
+  .bread-crumbs-list {
+    padding-bottom: 35px;
+  }
+  .bread-crumbs-item::after {
+    display: none;
+  }
+  .bread-crumbs-back-link {
+    width: 135px;
+    margin: 0 auto;
+  }
+  .bread-crumbs-back-link .arrow {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  /* for Mac OS X support */
+  width: 0;
+}
+
+.brief-box {
+  margin-bottom: 40px;
+}
+
+.ui-checkbox-group {
+  margin-bottom: 40px;
+}
+
+.ui-checkbox-group .ui-label-field {
+  margin-bottom: 27px;
+  display: block;
+}
+
+.ui-checkbox-group .checkbox-custom-label:not(:last-of-type) {
+  margin-right: 42px;
+}
+
+.ui-input-group .ui-label-field {
+  margin-bottom: 27px;
+  display: block;
+}
+
+.ui-input-group .ui-group {
+  margin-bottom: 10px;
+}
+
+.nav-btn {
+  padding: 85px 0;
+  text-align: center;
+}
+
 @media (min-width: 769px) {
   .bread-crumbs-list {
     height: 90px;
@@ -867,37 +1070,6 @@ header {
     vertical-align: middle;
     content: '';
   }
-}
-
-.brief-box {
-  margin-bottom: 40px;
-}
-
-.ui-checkbox-group {
-  margin-bottom: 40px;
-}
-
-.ui-checkbox-group .ui-label-field {
-  margin-bottom: 27px;
-  display: block;
-}
-
-.ui-checkbox-group .checkbox-custom-label:not(:last-of-type) {
-  margin-right: 42px;
-}
-
-.ui-input-group .ui-label-field {
-  margin-bottom: 27px;
-  display: block;
-}
-
-.ui-input-group .ui-group {
-  margin-bottom: 10px;
-}
-
-.nav-btn {
-  padding: 85px 0;
-  text-align: center;
 }
 
 @media (max-width: 414px) {

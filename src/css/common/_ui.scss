@@ -96,6 +96,121 @@
 }
 
 .ui-select-section {
+  .ui-field {
+    line-height: 55px;
+    cursor: pointer;
+  }
+  .arrow {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 19px;
+    right: 21px;
+    fill: #3db8e0;
+  }
+}
+
+.select-list-wrap {
+  margin-top: -35px;
+  padding: 20px 20px 20px 0;
+  background-color: #141516;
+  color: #a6a6a6;
+  font-size: 17px;
+
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+
+  transition: all .3s ease;
+  @include CeraGRRegular;
+  .custom-scroll_container {
+    height: 294px;
+  }
+  .custom-scroll_bar-x {
+    display: none;
+  }
+}
+
+.ui-select-field-open {
+  height: 100%;
+  margin-bottom: 35px;
+  overflow: visible;
+  opacity: 1;
+  position: relative;
+}
+
+.select-list {
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 30px;
+  list-style: none;
+  li {
+    height: 45px;
+    padding-left: 20px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease;
+    &:hover {
+      background-color: #1b1d1e;
+    }
+    &:not(:last-of-type) {
+      border-color: #1a1c1d;
+    }
+    &::before {
+      width: 20px;
+      height: 1px;
+      margin-right: 20px;
+      background-color: #fff;
+    }
+  }
+}
+
+.select-list-choose {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.select-list-choose__item {
+  padding-right: 87px;
+  padding-left: 22px;
+  margin-bottom: 46px;
+  color: #33ddfb;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  @include CeraGRRegular;
+  &::before {
+    background-color: #33ddfb;
+    width: 22px;
+    height: 1px;
+    margin-right: 20px;
+    content: '';
+  }
+  .close {
+    margin-left: auto;
+    cursor: pointer;
+  }
+  svg {
+    width: 12px;
+    height: 12px;
+    fill: #fa4b4b;
+  }
+}
+
+@include from('m') {
+  .select-list-choose {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .select-list-choose__item {
+    padding-right: 50px;
+    flex-basis: calc(100% / 2 - 15px);
+  }
 }
 
 @include to('xs') {

@@ -29,7 +29,8 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-xl-2 col-md-3 col-sm-2 col-xl-offset-1 go-home"><a href="http://azro.studio/" target="_blank">Go Home</a>
+                <div class="col-xl-2 col-md-3 col-sm-2 col-xl-offset-1 go-home">
+                    <a href="http://azro.studio/" target="_blank">Go Home</a>
                 </div>
                 <div class="col-md-6 col-sm-7 main-title">Landing Page <span>Brief</span></div>
                 <div class="col-xl-2 col-md-3 col-sm-3 phone"><a href="tel:+442032877968" rel="nofollow">+44 20 3287 7968</a></div>
@@ -40,8 +41,9 @@
     <div class="bread-crumbs">
         <div class="container">
             <ul class="bread-crumbs-list row">
-                <li class="bread-crumbs-back col-xl-2 col-md-1 col-sm-2 col-md-offset-1">
+                <li class="bread-crumbs-back col-xl-2 col-md-1 col-sm-2 col-xl-offset-1">
                     <a href="index.html" class="bread-crumbs-back-link">
+                        <span class="previous-step visible-xs">Previous Step</span>
                         <svg class="arrow">
                             <use xlink:href="img/icons.svg#arrow"></use>
                         </svg>
@@ -62,8 +64,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <div class="brief-box ui-group ui-checkbox-group">
-                    <div class="ui-label-field">*Do you require catalogue for your goods?</div>
+                <div class="brief-box ui-group ui-checkbox-group ui-required">
+                    <div class="ui-label-field">Do you require catalogue for your goods?</div>
 
                     <label class="checkbox-custom-label">
                         <input type="checkbox" name="yes-no" class="checkbox-custom">
@@ -74,6 +76,185 @@
                         <input type="checkbox" name="yes-no" class="checkbox-custom">
                         <span class="checkbox-custom-view">No</span>
                     </label>
+                </div>
+
+                <div class="brief-box ui-required">
+                    <div class="ui-label-field">What pages and sections do you need for your website?</div>
+
+                    <div class="ui-select-section">
+                        <div class="ui-group ui-select-field">
+                            <div class="select-box ui-field">
+                                <span>Select section</span>
+                                <svg class="arrow">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg>
+                            </div>
+                            <span class="ui-decor-line"></span>
+                        </div>
+
+                        <div class="select-list-wrap">
+                            <div class="custom-scroll_container">
+                                <ul class="select-list">
+                                    <li>About Company</li>
+                                    <li>Our Benefits</li>
+                                    <li>Offers / Price</li>
+                                    <li>How we works</li>
+                                    <li>Place for offer</li>
+                                    <li>Gallery / Our works</li>
+                                    <li>Documents</li>
+                                    <li>Reviews</li>
+                                    <li>Our Clients / Partners</li>
+                                    <li>F.A.Q.</li>
+                                    <li>Our Team</li>
+                                    <li>Contacts info</li>
+                                </ul>
+                                <div class="custom-scroll_bar-y"></div>
+                            </div>
+                        </div>
+
+                        <ul class="select-list-choose">
+                            <li class="select-list-choose__item"><span>About Company</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Our Benefits</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Offers / Price</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>How we works</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Place for offer</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Gallery</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Documents</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Reviews</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                        </ul>
+
+                        <div class="ui-group">
+                            <input type="text" class="ui-field ui-placeholder-hide" placeholder="Your Option">
+                            <span class="ui-decor-line"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brief-box ui-required">
+                    <div class="ui-label-field">What features and functions do you require?</div>
+
+                    <div class="ui-select-section">
+                        <div class="ui-group ui-select-field">
+                            <div class="select-box ui-field">
+                                <span>Select section</span>
+                                <svg class="arrow">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg>
+                            </div>
+                            <span class="ui-decor-line"></span>
+                        </div>
+
+                        <div class="select-list-wrap">
+                            <div class="custom-scroll_container">
+                                <ul class="select-list">
+                                    <li class="active">Social media</li>
+                                    <li>Callback</li>
+                                    <li>Newsletter</li>
+                                    <li>Multilanguage</li>
+                                    <li>Timer</li>
+                                    <li>Сalculator</li>
+                                    <li>Google maps</li>
+                                </ul>
+                                <div class="custom-scroll_bar-y"></div>
+                            </div>
+                        </div>
+
+                        <ul class="select-list-choose">
+                            <li class="select-list-choose__item"><span>About Company</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Our Benefits</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Offers / Price</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>How we works</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Place for offer</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Gallery</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Documents</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Reviews</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                        </ul>
+
+                        <div class="ui-group">
+                            <input type="text" class="ui-field ui-placeholder-hide" placeholder="Your Option">
+                            <span class="ui-decor-line"></span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="brief-box ui-group ui-required">
@@ -146,130 +327,115 @@
                     </label>
                 </div>
 
-
-                <br>
-                <br>
-                <br>
-
-
-                <div class="brief-box ui-select-section">
+                <div class="brief-box">
                     <div class="ui-label-field">Would you require technical support?</div>
 
-                    <div class=" ui-group">
-                        <div class="select-box ui-field">
-                            <span>Select section</span>
-                            <svg class="arrow">
-                                <use xlink:href="img/icons.svg#arrow"></use>
-                            </svg>
+                    <div class="ui-select-section">
+                        <div class="ui-group ui-select-field">
+                            <div class="select-box ui-field">
+                                <span>Select section</span>
+                                <svg class="arrow">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg>
+                            </div>
+                            <span class="ui-decor-line"></span>
                         </div>
-                        <span class="ui-decor-line"></span>
-                    </div>
 
+                        <div class="select-list-wrap">
+                            <div class="custom-scroll_container">
+                                <ul class="select-list clearfix">
+                                    <li>About Company</li>
+                                    <li>Our Benefits</li>
+                                    <li>Offers / Price</li>
+                                    <li>How we works</li>
+                                    <li>Place for offer</li>
+                                    <li>Gallery / Our works</li>
+                                    <li>Documents</li>
+                                    <li>Reviews</li>
+                                    <li>Our Clients / Partners</li>
+                                    <li>F.A.Q.</li>
+                                    <li>Our Team</li>
+                                    <li>Contacts info</li>
+                                </ul>
+                                <div class="custom-scroll_bar-y"></div>
+                            </div>
+                        </div>
+
+                        <ul class="select-list-choose">
+                            <li class="select-list-choose__item"><span>About Company</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Our Benefits</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Offers / Price</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>How we works</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Place for offer</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Gallery</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Documents</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                            <li class="select-list-choose__item"><span>Reviews</span>
+                                <span class="close"><svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="img/icons.svg#close"></use>
+                                </svg></span>
+                            </li>
+                        </ul>
+
+                        <div class="ui-group">
+                            <input type="text" class="ui-field ui-placeholder-hide" placeholder="Your Option">
+                            <span class="ui-decor-line"></span>
+                        </div>
+                    </div>
                 </div>
 
-
-                <div class="chackbox-box with-four-col chackbox-with-width">
-                    <div class="select-total-box" id="select-first">
-                        <div class="select-box">
-
-                            <div class="select-list-total scroll-pane jspScrollable">
-                                <div class="jspContainer">
-                                    <div class="jspPane">
-                                        <ul class="select-list clearfix">
-                                            <li><a data-id="1" href="#">About Company</a></li>
-                                            <li><a data-id="2" href="#">Our Benefits</a></li>
-                                            <li><a data-id="3" href="#">Offers / Price</a></li>
-                                            <li><a data-id="4" href="#">How we works</a></li>
-                                            <li><a data-id="5" href="#">Place for offer</a></li>
-                                            <li><a data-id="6" href="#">Gallery / Our works</a></li>
-                                            <li><a data-id="7" href="#">Documents</a></li>
-                                            <li><a data-id="8" href="#">Reviews</a></li>
-                                            <li><a data-id="9" href="#">Our Clients / Partners</a></li>
-                                            <li><a data-id="10" href="#">F.A.Q.</a></li>
-                                            <li><a data-id="11" href="#">Our Team</a></li>
-                                            <li><a data-id="12" href="#">Contacts info</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <ul class="chackbox-select-list clearfix">
-                                <li class="col-md-6" data-id="1">
-                                    <div class="select-chackbox"><i class="ico-check"></i><span>About Company</span><a
-                                            href="#" class="ico-close47"></a></div>
-                                </li>
-                                <li class="col-md-6" data-id="2">
-                                    <div class="select-chackbox"><i class="ico-check"></i><span>Our Benefits</span><a
-                                            href="#" class="ico-close47"></a></div>
-                                </li>
-                                <li class="col-md-6" data-id="3">
-                                    <div class="select-chackbox"><i class="ico-check"></i><span>Offers / Price</span><a
-                                            href="#" class="ico-close47"></a></div>
-                                </li>
-                                <li class="col-md-6" data-id="4">
-                                    <div class="select-chackbox"><i class="ico-check"></i><span>How we works</span><a
-                                            href="#" class="ico-close47"></a></div>
-                                </li>
-                                <li class="col-md-6" data-id="5">
-                                    <div class="select-chackbox"><i class="ico-check"></i><span>Place for offer</span><a
-                                            href="#" class="ico-close47"></a></div>
-                                </li>
-                                <li class="col-md-6" data-id="6">
-                                    <div class="select-chackbox"><i
-                                            class="ico-check"></i><span>Gallery / Our works</span><a
-                                            href="#" class="ico-close47"></a></div>
-                                </li>
-                                <li class="col-md-6" data-id="7">
-                                    <div class="select-chackbox"><i class="ico-check"></i><span>Documents</span><a
-                                            href="#"
-                                            class="ico-close47"></a>
-                                    </div>
-                                </li>
-                                <li class="col-md-6" data-id="8">
-                                    <div class="select-chackbox"><i class="ico-check"></i><span>Reviews</span><a
-                                            href="#"
-                                            class="ico-close47"></a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-
-                        <div class="input-box clearfix">
-                            <div class="input-total">
-                                <input type="text" name="your_option_page" class="big" id="" placeholder="Your Option"
-                                       value="">
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <br>
-                    <br>
-                    <br>
-
-
-                    <p>
-                        <label for="amount">Price range:</label>
-                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                    </p>
+                <div class="brief-box ui-required">
+                    <label class="ui-label-field" for="amount">What features and functions do you require?</label>
 
                     <div id="slider-range"></div>
 
+                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                </div>
 
-                    <div class="nav-btn">
-                        <a href="#" class="btn btn-offset"><span class="btn-offset-text">Next Step</span></a>
-                    </div>
+                <div class="nav-btn">
+                    <a href="#" class="btn btn-offset"><span class="btn-offset-text">Next Step</span></a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="js/jquery.js"></script>
+<script src="js/jquery.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/custom.js"></script>
 
