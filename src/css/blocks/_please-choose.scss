@@ -1,71 +1,73 @@
 .please-choose {
-  padding-top: 84px;
-  padding-bottom: 84px;
-  text-align: center;
+    padding-top: 84px;
+    padding-bottom: 84px;
+    text-align: center;
 }
 
 .choose-main-title {
-  margin: 0 0 119px;
-  font-size: 24px;
-  color: #e6e6e6;
-  @include CeraGRLight;
-  span {
-    display: block;
-  }
-  &::after {
-    width: 165px;
-    height: 1px;
-    margin-top: 34px;
-    background-color: #33ddfb;
-    display: inline-block;
-    content: '';
-  }
+    margin: 0 0 119px;
+    font-size: 24px;
+    color: #e6e6e6;
+    @include CeraGRLight;
+    span {
+        display: block;
+    }
+    &::after {
+        width: 165px;
+        height: 1px;
+        margin-top: 34px;
+        background-color: #33ddfb;
+        display: inline-block;
+        content: '';
+    }
 }
 
 .choose-list {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  li {
-    position: relative;
-    &:not(:first-child):not(:last-child) {
-      .decor-rhombus {
-        width: 134px;
-        height: 134px;
-        margin-left: -67px;
-        top: 0;
-        &::after {
-          width: 128px;
-          height: 128px;
-          margin-left: -64px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    li {
+        position: relative;
+        &:not(:first-child):not(:last-child) {
+            .decor-rhombus {
+                width: 134px;
+                height: 134px;
+                margin-left: -67px;
+                top: 0;
+                &::after {
+                    width: 128px;
+                    height: 128px;
+                    margin-left: -64px;
+                }
+            }
         }
-      }
     }
-  }
 }
 
 .choose-title {
-  margin: 0;
-  padding: 51px 0 68px;
-  color: #33ddfb;
-  text-transform: uppercase;
-  font-size: 32px;
-  position: relative;
-  z-index: 10;
-  cursor: pointer;
-  white-space: nowrap;
-  @include CeraGRMedium;
-  .small {
-    margin-top: 5px;
-    font-size: 15px;
+    margin: 0;
+    padding: 51px 0 68px;
+    color: #33ddfb;
+    text-transform: uppercase;
+    font-size: 32px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    white-space: nowrap;
     display: block;
-  }
-  &:hover + .decor-rhombus {
-    transform: rotateZ(0);
-  }
+    @include CeraGRMedium;
+    .small {
+        margin-top: 5px;
+        font-size: 15px;
+        display: block;
+    }
+    &:hover + .decor-rhombus {
+        transform: rotateZ(0);
+    }
 }
 
 .choose-content {
-  color: #fff;
-  line-height: 1.3;
+    color: #fff;
+    line-height: 1.3;
+    display: block;
 }

@@ -1,227 +1,256 @@
 @import "mixin";
 
 ::-webkit-scrollbar { /* for Mac OS X support */
-  width: 0;
+    width: 0;
 }
 
 .ui-placeholder-hide {
-  @include hidePlaceholder {
-    opacity: 1;
-    color: #939393;
-    font-size: 16px;
-    transition: opacity 0.3s ease;
-    @include CeraGRRegular;
-  }
-  &:focus {
     @include hidePlaceholder {
-      opacity: 0;
+        opacity: 1;
+        color: #939393;
+        font-size: 16px;
+        transition: opacity 0.3s ease;
+        @include CeraGRRegular;
     }
-  }
+    &:focus {
+        @include hidePlaceholder {
+            opacity: 0;
+        }
+    }
 }
 
 .ui-group {
-  margin-bottom: 35px;
-  position: relative;
-  font-size: 18px;
-  @include CeraGRRegular;
+    margin-bottom: 35px;
+    position: relative;
+    font-size: 18px;
 }
 
 .ui-label-field {
-  margin-bottom: 12px;
-  display: inline-block;
-  font-size: 18px;
-  position: relative;
+    padding-left: 15px;
+    margin-bottom: 12px;
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
 }
 
 .ui-decor-line {
-  width: 0;
-  height: 2px;
-  display: block;
-  margin-top: -2px;
-  background-color: #3db8e0;
-  transition: width .3s ease;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: -2px;
+    background-color: #3db8e0;
+    transition: width .3s ease;
 }
 
 .ui-field {
-  width: 100%;
-  height: 55px;
-  padding: 0 20px;
-  font-size: 16px;
-  color: #fff;
-  border: 0;
-  background-color: rgba(#fff, .04);
-  display: block;
-  font-weight: normal;
-  box-shadow: 0 0 45px rgba(#000, .12);
-  transition: all .6s ease;
-  &:focus {
-    background-color: rgba(#fff, .12);
-    + .ui-decor-line {
-      width: 100%;
+    width: 100%;
+    height: 55px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #939393;
+    border: 0;
+    background-color: rgba(#fff, .04);
+    display: block;
+    font-weight: normal;
+    box-shadow: 0 0 45px rgba(#000, .12);
+    transition: all .6s ease;
+    &:focus {
+        background-color: rgba(#fff, .12);
+        + .ui-decor-line {
+            width: 100%;
+        }
     }
-  }
 }
 
-.ui-required .ui-label-field {
-  padding-left: 7px;
-  &::before {
+.ui-required .ui-label-field::before {
     content: '*';
     color: #fa4b4b;
     font-size: 17px;
-  }
+    position: absolute;
+    left: 7px;
+    top: 0;
 }
 
 .ui-error-field-text {
-  color: #fa4b4b;
-  position: absolute;
-  bottom: 19px;
-  left: 20px;
-  display: none;
-  font-size: 16px;
+    color: #fa4b4b;
+    position: absolute;
+    bottom: 19px;
+    left: 20px;
+    display: none;
+    font-size: 16px;
 }
 
 .ui-error-field {
-  .ui-field {
-    background-color: rgba(#fa4b4b, .07);
-    @include hidePlaceholder {
-      opacity: 0;
+    .ui-field {
+        background-color: rgba(#fa4b4b, .07);
+        @include hidePlaceholder {
+            opacity: 0;
+        }
+        &:focus ~ .ui-error-field-text {
+            opacity: 0;
+        }
     }
-    &:focus ~ .ui-error-field-text {
-      opacity: 0;
+    .ui-error-field-text {
+        display: block;
     }
-  }
-  .ui-error-field-text {
-    display: block;
-  }
 }
 
 .ui-checkbox-group {
-  position: relative;
+    position: relative;
 }
 
 .ui-select-section {
-  .ui-field {
-    line-height: 55px;
-    cursor: pointer;
-  }
-  .arrow {
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    top: 19px;
-    right: 21px;
-    fill: #3db8e0;
-  }
+    position: relative;
+    .ui-field {
+        padding-top: 0;
+        line-height: 59px;
+        cursor: pointer;
+    }
+    .arrow {
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: 19px;
+        right: 21px;
+        fill: #3db8e0;
+    }
 }
 
 .select-list-wrap {
-  margin-top: -35px;
-  padding: 20px 20px 20px 0;
-  background-color: #141516;
-  color: #a6a6a6;
-  font-size: 17px;
-
-  height: 1px;
-  overflow: hidden;
-  opacity: 0;
-  position: absolute;
-
-  transition: all .3s ease;
-  @include CeraGRRegular;
-  .custom-scroll_container {
-    height: 294px;
-  }
-  .custom-scroll_bar-x {
-    display: none;
-  }
+    padding: 20px 20px 20px 0;
+    background-color: #141516;
+    color: #a6a6a6;
+    font-size: 17px;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 55px;
+    z-index: -1;
+    transition: all .3s ease;
+    @include CeraGRRegular;
+    .custom-scroll_container {
+        height: 268px;
+    }
+    .custom-scroll_bar-x {
+        display: none;
+    }
 }
 
 .ui-select-field-open {
-  height: 100%;
-  margin-bottom: 35px;
-  overflow: visible;
-  opacity: 1;
-  position: relative;
+    opacity: 1;
+    z-index: 10;
 }
 
 .select-list {
-  margin-bottom: 0;
-  padding-left: 0;
-  padding-right: 30px;
-  list-style: none;
-  li {
-    height: 45px;
-    padding-left: 20px;
-    border-bottom: 2px solid transparent;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: all .3s ease;
-    &:hover {
-      background-color: #1b1d1e;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 30px;
+    list-style: none;
+    li {
+        height: 45px;
+        padding-left: 20px;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        transition: all .3s ease;
+        &::after {
+            width: 14px;
+            height: 7px;
+            top: 18px;
+            right: 20px;
+            z-index: 99;
+            position: absolute;
+            border-bottom: 2px solid #33ddfb;
+            border-left: 2px solid #33ddfb;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            content: '';
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        &::before {
+        }
+        &:not(.select-item-open):hover {
+            background-color: #1b1d1e;
+        }
+        &:not(:last-of-type) {
+            border-color: #1a1c1d;
+        }
+        &::before {
+            width: 20px;
+            height: 1px;
+            margin-right: 20px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            content: '';
+        }
     }
-    &:not(:last-of-type) {
-      border-color: #1a1c1d;
+    .select-item-open {
+        color: #33ddfb;
+        background-color: #1b1d1e;
+        &::before {
+            background-color: #33ddfb;
+        }
+        &::after {
+            opacity: 1;
+        }
     }
-    &::before {
-      width: 20px;
-      height: 1px;
-      margin-right: 20px;
-      background-color: #fff;
-    }
-  }
 }
 
 .select-list-choose {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
 
 .select-list-choose__item {
-  padding-right: 87px;
-  padding-left: 22px;
-  margin-bottom: 46px;
-  color: #33ddfb;
-  font-size: 17px;
-  display: flex;
-  align-items: center;
-  @include CeraGRRegular;
-  &::before {
-    background-color: #33ddfb;
-    width: 22px;
-    height: 1px;
-    margin-right: 20px;
-    content: '';
-  }
-  .close {
-    margin-left: auto;
-    cursor: pointer;
-  }
-  svg {
-    width: 12px;
-    height: 12px;
-    fill: #fa4b4b;
-  }
+    padding-right: 26px;
+    padding-left: 22px;
+    margin-bottom: 46px;
+    color: #33ddfb;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    @include CeraGRRegular;
+    &::before {
+        background-color: #33ddfb;
+        width: 22px;
+        height: 1px;
+        margin-right: 20px;
+        content: '';
+    }
+    .close {
+        margin-left: auto;
+        cursor: pointer;
+    }
+    svg {
+        width: 12px;
+        height: 12px;
+        fill: #fa4b4b;
+    }
 }
 
 .ui-checkbox-group {
-  margin-bottom: 40px;
-  .ui-label-field {
-    margin-bottom: 27px;
-    display: block;
-  }
-  .checkbox-custom-label:not(:last-of-type) {
-    margin-right: 42px;
-  }
+    margin-bottom: 40px;
+    .ui-label-field {
+        margin-bottom: 27px;
+        display: block;
+    }
+    .checkbox-custom-label:not(:last-of-type) {
+        margin-right: 42px;
+    }
 }
 
 .ui-input-group {
-  .ui-label-field {
-    margin-bottom: 27px;
-    display: block;
-  }
-  .ui-group {
-    margin-bottom: 10px;
-  }
+    .ui-label-field {
+        display: block;
+    }
+    .ui-group {
+        margin-bottom: 10px;
+    }
 }

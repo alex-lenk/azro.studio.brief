@@ -18,4 +18,9 @@ $(document).ready(function () {
     $(".ui-select-field").click(function () {
         $(".select-list-wrap").toggleClass("ui-select-field-open");
     });
+    $(".select-list li").click(function () {
+        $(this).toggleClass("select-item-open");
+    });
 });
+
+//= init/animated-gradient.js

@@ -12,10 +12,41 @@
 @import "blocks/bread-crumbs";
 
 .brief-box {
-  margin-bottom: 40px;
+    margin-bottom: 44px;
 }
 
 .nav-btn {
-  padding: 85px 0;
-  text-align: center;
+    padding: 85px 0;
+    text-align: center;
+}
+
+.ui-slider-text {
+    max-width: 525px;
+    display: flex;
+    .range-left, .range-right {
+        width: 60px;
+        background-color: transparent;
+        font-size: 17px;
+        color: #a6a6a6;
+        border: 0;
+        min-width: 0;
+        padding: 0;
+        @include CeraGRLight;
+    }
+    .range-right {
+        margin-left: auto;
+    }
+}
+
+#slider-range, .ui-slider-text {
+    width: 93%;
+}
+
+#slider-range {
+    max-width: 513px;
+    margin: 23px 12px 21px;
+}
+
+.ui-slider-horizontal .ui-slider-handle:focus {
+    outline: none;
 }

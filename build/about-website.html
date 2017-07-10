@@ -22,14 +22,17 @@
 <link rel="shortcut icon" href="img/touch/favicon.ico">
 <meta name="msapplication-config" content="img/touch/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lte IE 8]>
+<script src="http://phpbbex.com/oldies/oldies.js" charset="utf-8"></script><![endif]-->
 </head>
 <body>
 <div class="wrapper">
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-xl-2 col-md-3 col-sm-2 col-xl-offset-1 go-home">
+                <div class="go-home col-xl-2 col-md-3 col-sm-2 col-xl-offset-1 hidden-xs">
                     <a href="http://azro.studio/" target="_blank">Go Home</a>
                 </div>
                 <div class="col-md-6 col-sm-7 main-title">Landing Page <span>Brief</span></div>
@@ -41,7 +44,7 @@
     <div class="bread-crumbs">
         <div class="container">
             <ul class="bread-crumbs-list row">
-                <li class="bread-crumbs-back col-xl-2 col-md-1 col-sm-2 col-xl-offset-1">
+                <li class="bread-crumbs-back col-md-2 col-sm-2">
                     <a href="index.html" class="bread-crumbs-back-link">
                         <span class="previous-step visible-xs">Previous Step</span>
                         <svg class="arrow">
@@ -420,15 +423,18 @@
                 </div>
 
                 <div class="brief-box ui-required">
-                    <label class="ui-label-field" for="amount">What features and functions do you require?</label>
+                    <label class="ui-label-field">Budget range?</label>
 
                     <div id="slider-range"></div>
 
-                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                    <div class="ui-slider-text">
+                        <input type="text" name="minCost" data-cost="3000" class="range-left" id="minCost" value="$3000">
+                        <input type="text" name="maxCost" data-cost="15000" class="range-right" id="maxCost" value="$15000">
+                    </div>
                 </div>
 
                 <div class="nav-btn">
-                    <a href="#" class="btn btn-offset"><span class="btn-offset-text">Next Step</span></a>
+                    <a href="#" class="btn btn-offset"><span class="btn-offset-text">Send Brief</span></a>
                 </div>
             </div>
         </div>

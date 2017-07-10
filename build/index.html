@@ -22,14 +22,18 @@
 <link rel="shortcut icon" href="img/touch/favicon.ico">
 <meta name="msapplication-config" content="img/touch/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lte IE 8]>
+<script src="http://phpbbex.com/oldies/oldies.js" charset="utf-8"></script><![endif]-->
 </head>
 <body>
 <div class="wrapper">
     <header>
   <div class="container">
     <div class="row">
-      <div class="col-xl-2 col-md-3 col-sm-3 col-xl-offset-1 go-home"><a href="http://azro.studio/" target="_blank">Go Home</a>
+      <div class="go-home col-xl-2 col-md-3 col-sm-2 col-xl-offset-1 hidden-xs">
+        <a href="http://azro.studio/" target="_blank">Go Home</a>
       </div>
 
       <div class="col-md-6 col-sm-6 main-title">Azro.studio <span>Brief</span></div>
@@ -44,32 +48,34 @@
     <h2 class="choose-main-title"><span>Please, select  type of the website</span></h2>
 
     <ul class="choose-list">
-        <li>
-            <h3 class="choose-title">Landing Page <span class="small">website</span></h3>
-            <div class="decor-rhombus"></div>
+        <li><a href="about-business.html">
+            <span class="choose-title">Landing Page <span class="small">website</span></span>
+            <span class="decor-rhombus"></span>
 
-            <div class="choose-content">This is the ideal solution for companies that want to boost the sales of a one specific product or
+            <span class="choose-content">This is the ideal solution for companies that want to boost the sales of a one specific product or
                 service. It is a one page website that provides only the necessary information.
-            </div>
-        </li>
-        <li>
-            <h3 class="choose-title">Business <span class="small">website</span></h3>
-            <div class="decor-rhombus"></div>
+            </span>
+        </a></li>
 
-            <div class="choose-content">
+        <li><a href="about-business.html">
+            <span class="choose-title">Business <span class="small">website</span></span>
+            <span class="decor-rhombus"></span>
+
+            <span class="choose-content">
                 This is the best way to enhance your brand image, offer your products and services online and attract
                 more clients. Corporate website is ideal for new and established companies.
-            </div>
-        </li>
-        <li>
-            <h3 class="choose-title">E-commerce <span class="small">website</span></h3>
-            <div class="decor-rhombus"></div>
+            </span>
+        </a></li>
 
-            <div class="choose-content">
+        <li><a href="about-website.html">
+            <span class="choose-title">E-commerce <span class="small">website</span></span>
+            <span class="decor-rhombus"></span>
+
+            <span class="choose-content">
                 This is an extremely powerful tool to push your sales to the next level. E-commerce will allow you to
                 attract potential clients from all over the world as well as automate your selling process.
-            </div>
-        </li>
+            </span>
+        </a></li>
     </ul>
 </section>
 
